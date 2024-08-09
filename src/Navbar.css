@@ -11,8 +11,9 @@
 .nav-logo {
     display: flex;
     align-items: center;
-   
-   
+    height: 50px;
+    position: relative;
+    cursor: pointer;
 }
 
 #logo {
@@ -20,7 +21,51 @@
     width: auto;
     background-color: white;
     border-radius: 50%;
-    
+    margin: 5px;
+    transition: transform 0.3s ease;
+}
+
+#logo.rotate {
+    transform: rotate(180deg);
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 200px;
+    z-index: 1;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-in-out;
+    background: linear-gradient(rgb(111, 0, 0), rgba(0, 0, 0, 0.647));
+}
+
+.menu.spread {
+    max-height: 300px;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    font-weight: 300;
+    padding: 10px 30px;
+    color: white;
+    transition: all 0.4s ease-in-out;
+}
+
+.menu-items li:hover {
+    background-color: #00000074;
 }
 
 .nav-items {
@@ -34,7 +79,8 @@
 .nav-item {
     cursor: pointer;
     border-radius: 20px;
-    padding: 10px;text-align: center;
+    padding: 10px;
+    text-align: center;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
@@ -70,3 +116,30 @@
 .search button:hover {
     background-color: #000000;
 }
+.dropdown{
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    margin: 0px;
+    position: absolute;
+    display: none;
+    z-index: 1;
+    transition: all 2s ease-in-out;
+    border-radius: 6px;
+}
+.dropdown ul{
+    list-style-type: none;
+    padding: 0px;
+   
+}
+.dropdown ul li{
+    padding: 10px;
+    font-weight: 700;
+    margin: 10px;
+    border-radius: 6px;
+}
+.dropdown ul li:hover{
+   background-color: #bab5b5;
+}
+.show{
+    display: block;
+   }
