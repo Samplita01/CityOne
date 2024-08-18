@@ -90,3 +90,20 @@ a {
         transform: rotateZ(360deg);
     }
 }
+@media screen and (max-width: 500px){
+    .hero{
+        flex-direction: column;
+        padding-top: 210px;
+    }
+    .hero-left{
+        padding-left: 130px;
+    }
+    .hero-latest-btn{
+        width: 85%;
+        font-size: 30px;
+    }
+    .hero-left h2{
+        font-size: 100px;
+    }
+
+}

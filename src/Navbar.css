@@ -14,6 +14,7 @@
     height: 50px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
 }
 
 #logo {
@@ -140,6 +141,139 @@
 .dropdown ul li:hover{
    background-color: #bab5b5;
 }
+.new-notif{
+    background-color: red;
+    border-radius: 20px;
+    padding: 3px;
+    font-size: 10px;
+    z-index: 1;
+    position: absolute;
+    left: 30px;
+    top: -1px;
+    animation: blink 1.5s infinite ease-in-out ;
+}
+@keyframes blink {
+    0%{
+        opacity: 0%;
+    }
+    50%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+    
+}
 .show{
     display: block;
    }
+  .burger{
+    display: none;
+  }
+@media screen and (max-width: 500px) {
+    #root {position: absolute;
+    width: 250%;}
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        font-size: 30px;
+        position:fixed;
+        padding-bottom: 10px;
+    }
+
+    .nav-logo {
+        left: 58px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    #logo{
+        height: 60px;
+    }
+
+    .burger {
+        display: block;
+        height: 40px;
+        margin: 10px;
+    }
+    .burger img{
+       height: 30px;
+        color: white;
+        font-weight: 700;
+        height: 50px;
+    }
+
+    .nav-items.show,
+    .search.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start;
+        display: none;
+       
+    }
+
+    .nav-item {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .search {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        display: none;
+     
+    }
+
+    .search input {
+        flex-grow: 1;
+        padding: 5px;
+        height: 30px;
+        width: 70%;
+    }
+
+    .search button {
+        width: 25%;
+        font-size: 30px;
+    }
+
+    .dropdown {
+        width: 100%;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .dropdown ul {
+        padding: 0;
+    }
+
+    .dropdown ul li {
+        padding: 10px 5px;
+        margin: 5px 0;
+    }
+
+    .menu {
+        width: 100%;
+        position: relative;
+        top: 50px;
+        
+    }
+ .menu-items{
+    display: flex;
+    padding: 20px;
+ }
+    .menu-items li {
+        padding: 20px 0px;
+    }
+    .footer{
+        z-index: -1;
+    }
+}
